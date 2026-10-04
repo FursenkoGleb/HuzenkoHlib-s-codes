@@ -1,0 +1,71 @@
+using System;
+
+namespace LabWork2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("--- Завдання 1 ---");
+            
+            Console.Write("Введіть значення x: ");
+            double x = double.Parse(Console.ReadLine());
+            
+            Console.Write("Введіть значення y: ");
+            double y = double.Parse(Console.ReadLine());
+            
+            Console.Write("Введіть значення z: ");
+            double z = double.Parse(Console.ReadLine());
+
+            double maxVal = Math.Max(x * x, Math.Max(y * y, x * z));
+            double numerator = maxVal + x;
+
+            double minVal = Math.Min(x, y);
+            double denominator = Math.Pow(minVal, 2) - y;
+
+            if (denominator == 0)
+            {
+                Console.WriteLine("Помилка: знаменник дорівнює нулю (ділення на нуль неможливе).");
+            }
+            else
+            {
+                double F = numerator / denominator;
+                Console.WriteLine($"Результат F = {F:F4}");
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("--- Завдання 2 ---");
+            
+            Console.Write("Введіть координату x точки M: ");
+            double px = double.Parse(Console.ReadLine());
+            
+            Console.Write("Введіть координату y точки M: ");
+            double py = double.Parse(Console.ReadLine());
+
+            int N;
+
+            if ((px <= 0 && py >= 0) || (px >= 0 && py <= 0))
+            {
+                N = 4;
+            }
+            else if (px * px + py * py >= 25)
+            {
+                N = 3;
+            }
+            else if (px < 0 && py < 0)
+            {
+                N = 2;
+            }
+            else
+            {
+                N = 1;
+            }
+
+            Console.WriteLine($"Точка M({px}; {py}) лежить в області з N = {N}");
+            
+            Console.WriteLine("\nДля завершення програми натисніть Enter.");
+            Console.ReadLine();
+        }
+    }
+}
