@@ -1,0 +1,22 @@
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+/* Це текст другої програми мовою C# */
+
+Console.WriteLine("Програма" + "!!!");
+Console.WriteLine("Введіть ціле число ");
+int i;
+i = int.Parse(Console.ReadLine());
+Console.WriteLine("i = " + i);
+
+Console.WriteLine("Введіть дійсне число ");
+double f;
+f = double.Parse(Console.ReadLine());
+Console.WriteLine("f = " + f);
+
+// Складаємо вираз
+f = Math.Sqrt(i * i + f * f);
+Console.WriteLine("Результат = " + f);
+
+f = Math.Tan(f);
+Console.WriteLine("Результат = " + f);
+
