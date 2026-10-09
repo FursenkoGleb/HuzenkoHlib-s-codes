@@ -1,0 +1,20 @@
+Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+/* Це текст першої програми мовою C# */
+// Коментар може бути поміщений після двох слешів
+
+// Вивели заголовок
+Console.WriteLine("Перша програма" + "!!!");
+// Вивели запрошення
+Console.WriteLine("Введіть ціле число ");
+int i; // Визначили цілу змінну
+// Прочитали цілу змінну
+i = int.Parse(Console.ReadLine());
+Console.WriteLine("i = " + i); // Вивели її значення
+
+// Вивели запрошення
+Console.WriteLine("Введіть дійсне число ");
+double f; // Визначили дійсну змінну
+// Прочитали дійсну змінну
+f = double.Parse(Console.ReadLine());
+Console.WriteLine("f = " + f); // Вивели її значення
